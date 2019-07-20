@@ -7,6 +7,8 @@ __pycache__/
 .Python
 env/
 build/
+temp/
+chk_generic_f2py/
 develop-eggs/
 dist/
 downloads/
