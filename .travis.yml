@@ -22,4 +22,4 @@ install:
     - "python setup.py install"
   
 script:
-    - py.test
+    - "python ./genericf2py/main.py"
