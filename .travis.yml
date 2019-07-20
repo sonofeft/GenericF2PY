@@ -21,11 +21,6 @@ before_install:
         brew install gcc;
     fi
 
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-        - sudo apt-get install libblas-dev liblapack-dev
-        - sudo apt-get install libopenmpi-dev openmpi-bin # libhdf5-openmpi-dev
-    fi
-
 install:
     - "sudo apt-get update"
     - "sudo apt-get install python-numpy gfortran"
