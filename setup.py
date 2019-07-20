@@ -47,7 +47,7 @@ exec( open( target_file ).read() )  # creates local __version__ variable
 
 ext_fprog = Extension(name = 'genericf2py.fprog',
             sources = ['genericf2py/src/fprog.f'],
-            extra_link_args=["-static", "-shared", "-static-libgfortran"])
+            extra_link_args=["-static", "-shared"])
 
 setup(
     name='genericf2py',
