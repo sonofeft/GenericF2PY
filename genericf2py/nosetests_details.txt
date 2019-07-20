@@ -1,0 +1,30 @@
+________tk_nosy UNITTEST RUN# 4_________
+
+{Item #1} runTest, builtins.ModuleNotFoundError
+Traceback (most recent call last):
+  File "d:\python37\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "d:\python37\lib\unittest\case.py", line 615, in run
+    testMethod()
+  File "d:\python37\lib\site-packages\nose\failure.py", line 39, in runTest
+    raise self.exc_val.with_traceback(self.tb)
+  File "d:\python37\lib\site-packages\nose\loader.py", line 418, in loadTestsFromName
+    addr.filename, addr.module)
+  File "d:\python37\lib\site-packages\nose\importer.py", line 47, in importFromPath
+    return self.importFromDir(dir_path, fqname)
+  File "d:\python37\lib\site-packages\nose\importer.py", line 94, in importFromDir
+    mod = load_module(part_fqname, fh, filename, desc)
+  File "d:\python37\lib\imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "d:\python37\lib\imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 726, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "D:\2019_py_proj\GenericF2PY\genericf2py\tests\test_main.py", line 15, in <module>
+    from genericf2py.main import main
+  File "D:\2019_py_proj\GenericF2PY\genericf2py\main.py", line 50, in <module>
+    from genericf2py.fprog import add_2_ints, offset_int
+ModuleNotFoundError: No module named 'genericf2py.fprog'
+

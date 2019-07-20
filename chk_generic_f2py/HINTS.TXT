@@ -1,0 +1,146 @@
+
+*) Good example
+https://github.com/spacepy/spacepy/blob/master/setup.py
+
+
+scikit-build is an improved build system generator for CPython 
+C/C++/Fortran/Cython extensions.
+
+https://python-packaging-tutorial.readthedocs.io/en/latest/binaries_dependencies.html
+    This section discusses the creation of Python packages that contain native binaries.
+
+https://www.scivision.co/f2py-running-fortran-code-in-python-on-windows/
+
+https://www.scivision.dev/windows-gcc-gfortran-cmake-make-install/
+
+*) Good advice if f2py is required.
+https://github.com/space-physics/lowtran
+
+https://www.scivision.co/install-windows-subsystem-for-linux/
+
+*** NEED link flags from here.
+https://stackoverflow.com/questions/44043990/how-to-build-a-python-wheel-with-compiled-fortran-extension-module-without-requi
+-static -static-libgfortran -static-libgcc
+
+from numpy.distutils.core import Extension, setup
+
+
+if __name__ == "__main__":
+    setup(
+        name="this",
+        ext_modules=[
+            Extension("fortmod_nostatic",
+                      ["src/code.f90"],
+                      ),
+            Extension("fortmod_withstatic",
+                      ["src/code.f90"],
+                      extra_link_args=["-static", "-static-libgfortran", "-static-libgcc"]
+                      )
+        ]
+    )
+
+=========== FORTRAN / python projects ==============
+
+https://github.com/scivision/f2py-examples
+
+https://github.com/rwalk/pyquadprog
+https://github.com/pyccel/psydac
+https://github.com/space-physics/IRI2016
+https://github.com/keurfonluu/FTeikPy
+
+https://github.com/SHTOOLS/SHTOOLS/
+https://pypi.org/project/pyshtools/#files    ... has many platform wheels
+
+https://github.com/scivision/signal_subspace
+https://github.com/mancellin/capytaine
+https://github.com/space-physics/iri90
+https://github.com/space-physics/GLOW
+
+https://github.com/scikit-build/scikit-build
+
+
+gfort2py ???
+https://github.com/rjfarmer/gfort2py
+
+=================== Travis CI =================
+Can test on both Linux and macOS
+
+in .travis.yml
+os:
+  - linux
+  - osx
+  
+# can deploy to PyPI
+deploy:
+  skip_cleanup: true
+
+deploy:
+  provider: pypi
+  user: "Your username"
+  password: "Your password"
+------------
+  
+However, this would expose your PyPI password to the world. 
+We recommend you encrypt your password and add it to your .travis.yml by running:
+
+travis encrypt your-password-here --add deploy.password
+
+deploy:
+  provider: pypi
+  user: "Your username"
+  password:
+    secure: "Your encrypted password"
+
+------------
+Deploying tags #
+Most likely, you would only want to deploy to PyPI when a new version of your package is cut. To do this, you can tell Travis CI to only deploy on tagged commits, like so:
+
+deploy:
+  provider: pypi
+  user: ...
+  password: ...
+  on:
+    tags: true
+
+If you tag a commit locally, remember to run git push --tags to ensure that your tags are uploaded to GitHub.
+
+------------
+Uploading different distributions #
+By default, only a source distribution (‘sdist’) will be uploaded to PyPI. 
+If you would like to upload different distributions, specify them using the distributions option, like this:
+
+deploy:
+  provider: pypi
+  user: ...
+  password: ...
+  distributions: "sdist bdist_wheel" # Your distributions here
+  
+If you specify bdist_wheel in the distributions, the wheel package will automatically be installed.
+
+------------
+
+
+# conditional release with "on" directive
+deploy:
+  provider: s3
+  access_key_id: "YOUR AWS ACCESS KEY"
+  secret_access_key: "YOUR AWS SECRET KEY"
+  bucket: "S3 Bucket"
+  skip_cleanup: true
+  on:
+    branch: release
+    condition: $MY_ENV = super_awesome
+
+-------------------------
+
+EDIT: I was able to solve the problem by doing some digging, I had to write a 
+distutils.cfg file in C:\...\Anaconda3\Lib\distutils with the following:
+
+[build]           
+compiler=mingw32 
+And then run the following commands from Anaconda prompt:
+
+conda install libpython
+conda install -c msys2 m2w64-toolchain
+After that pip install PyAstronomy_ext worked perfectly.
+

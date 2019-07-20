@@ -1,0 +1,15 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module hi_ftn ! in 
+    interface  ! in :hi_ftn
+        subroutine add_2_ints(i1,i2,isum) ! in :hi_ftn:hi_ftn.f
+            integer intent(in) :: i1
+            integer intent(in) :: i2
+            integer intent(out) :: isum
+        end subroutine add_2_ints
+    end interface 
+end python module hi_ftn
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/

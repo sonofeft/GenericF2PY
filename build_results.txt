@@ -1,0 +1,48 @@
+_______________________________________________________
+Python Version: 3.5.4 (v3.5.4:3f56838, Aug  8 2017, 02:07:06) [MSC v.1900 32 bit (Intel)]
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+Python Version: 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 23 2018, 23:31:17) [MSC v.1916 32 bit (Intel)]
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+Python Version: 3.7.0b4 (v3.7.0b4:eb96c37699, May  2 2018, 18:05:41) [MSC v.1913 32 bit (Intel)]
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+('Python Version:', '2.7.15 (v2.7.15:ca079a3ea3, Apr 30 2018, 16:22:17) [MSC v.1500 32 bit (Intel)]')
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+Python Version: 3.5.3 (v3.5.3:1880cb95a742, Jan 16 2017, 16:02:32) [MSC v.1900 64 bit (AMD64)]
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+Python Version: 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)]
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+Python Version: 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit (AMD64)]
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+('Python Version:', '2.7.15 (v2.7.15:ca079a3ea3, Apr 30 2018, 16:30:26) [MSC v.1500 64 bit (AMD64)]')
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
