@@ -5,6 +5,16 @@ python:
 
 os:
   - linux
+  
+addons:
+  apt_packages:
+    - gfortran
+
+
+before_install:
+  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
+        brew install gcc;
+    fi
 
 install:
     - pip install -r requirements.txt
