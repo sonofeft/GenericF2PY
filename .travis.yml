@@ -21,6 +21,11 @@ before_install:
         brew install gcc;
     fi
 
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+        - sudo apt-get install libblas-dev liblapack-dev
+        - sudo apt-get install libopenmpi-dev openmpi-bin # libhdf5-openmpi-dev
+    fi
+
 install:
     - pip install -r requirements.txt
     - pip install -e .
