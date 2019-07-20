@@ -3,13 +3,15 @@ import unittest
 
 import sys, os
 
+'''
 here = os.path.abspath(os.path.dirname(__file__)) # Needed for py.test
 up_one = os.path.split( here )[0]  # Needed to find genericf2py development version
 if here not in sys.path[:2]:
     sys.path.insert(0, here)
 if up_one not in sys.path[:2]:
     sys.path.insert(0, up_one)
-    
+'''
+
 from genericf2py.main import main
 from genericf2py.fprog import add_2_ints, offset_int
 
