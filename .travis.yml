@@ -10,6 +10,9 @@ addons:
     - gfortran
 
 
+env: FC=gfortran
+
+
 before_install:
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
       sudo apt-get update -qq;
@@ -22,6 +25,7 @@ before_install:
 
 install:
     - pip install -r requirements.txt
+    - pip install .
 
 script:
     - py.test
