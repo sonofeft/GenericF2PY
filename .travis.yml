@@ -10,16 +10,8 @@ env: FC=gfortran
 
 
 before_install:
-  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
-        brew install python3;
-        brew install gcc;
-        pip install -r requirements.txt;
-    fi
-
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-        sudo apt-get update;
-        sudo apt-get install python-numpy gfortran;
-    fi
+    - "sudo apt-get update"
+    - "sudo apt-get install python-numpy gfortran"
 
 install:
     - "python setup.py build"
