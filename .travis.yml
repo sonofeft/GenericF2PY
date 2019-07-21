@@ -1,18 +1,17 @@
 
 matrix:
   include:
-  - os: linux
+  - os: windows
 
-    name: Linux Check
-    language: python
-    python:
-        - "3.7"
+    name: Windows Check
+    language: minimal
         
     env: FC=gfortran
 
     before_install:
-        - "sudo apt-get update"
-        - "sudo apt-get install python-numpy gfortran"
+        - "choco install python --version 3.7.2"
+        - "choco install mingw"
+        - "export PATH="/c/Python37:/c/Python37/Scripts:$PATH""
 
 install:
     - "python setup.py build"
