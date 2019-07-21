@@ -5,7 +5,7 @@ python:
 dist: xenial
 
 os:
-  - linux
+  - osx
 
 env: FC=gfortran
 
