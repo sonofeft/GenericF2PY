@@ -1,17 +1,18 @@
-language: python
 
-python:
-    - "3.7"
-    
-os:
-  - linux
+matrix:
+  include:
+  - os: linux
 
-env: FC=gfortran
+    name: Linux Check
+    language: python
+    python:
+        - "3.7"
+        
+    env: FC=gfortran
 
-
-before_install:
-    - "sudo apt-get update"
-    - "sudo apt-get install python-numpy gfortran"
+    before_install:
+        - "sudo apt-get update"
+        - "sudo apt-get install python-numpy gfortran"
 
 install:
     - "python setup.py build"
