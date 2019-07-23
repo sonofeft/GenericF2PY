@@ -1,0 +1,5 @@
+
+
+sudo apt-get install gfortran
+
+pip install numpy
