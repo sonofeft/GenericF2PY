@@ -3,3 +3,111 @@
 sudo apt-get install gfortran
 
 pip install numpy
+
+>>>>>>>>>>>>>>>>>>>> LUBUNTU <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>> Debian 64, Mate <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+#............. Tested and Working Approach .............
+# go to: https://github.com/sonofeft/GenericF2PY
+# Use "Clone or download" button to "Download ZIP"
+
+# with the source code at:
+/home/<Your Name Here>/Downloads/GenericF2PY-master
+
+# give the command:
+pip install -e .
+
+# will compile and install.
+
+#............... gfortran fails on simple approach ............
+pip install genericf2py
+
+# ============= SUCCESS on Lubuntu v ===================
+
+sudo apt-get install gfortran
+pip install numpy
+pip install genericf2py
+
+ - compiles and installs genericf2py 
+   Operating System: Ubuntu 18.04 LTS
+             Kernel: Linux 4.15.0-20-generic
+       Architecture: x86-64
+
+ - same approach worked on: (I thought it failed before???)
+  Operating System: Ubuntu 18.10
+            Kernel: Linux 4.18.0-25-generic
+      Architecture: x86-64
+
+# ----------------------- ALSO WORKED ---------------------------
+pip install -e git+https://github.com/sonofeft/GenericF2PY#egg=GenericF2PY
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>> CENTOS <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+install gfortran
+yum install gcc-gfortran
+pip install numpy
+pip install genericf2py
+
+
+---- might install other python versions.
+
+- multiple python versions
+sudo yum update
+sudo yum install centos-release-scl  # Software Collections project
+
+sudo yum install rh-python36
+sudo yum install rh-python37
+python ––version
+
+- install python from source
+sudo yum install gcc openssl-devel bzip2-devel
+
+# get python version source address and download it.
+sudo wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz
+
+sudo tar xzf Python-3.7.2.tgz
+cd Python-3.7.2.tgz
+./configure ––enable–optimizations
+make altinstall
+python3.7 –v
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>> OPENSUSE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+- Never worked... last error was not finding Python.h during compile.
+
+sudo zypper install gcc gcc-c++ gcc-fortran
+sudo pip install numpy
+sudo pip install genericf2py
+
+-  may also need
+sudo zypper in gnome-terminal
+sudo zypper in git
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>> MacOS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+High Sierra VM
+
+brew install gcc
+brew install python3
+pip3 install numpy
+
+pip3 install genericf2py  # compile failed with "-bundle not allowed with -dynamiclib"
+                          # (probably fixed by removing -shared from github setup.py)
+
+#............. Tested and Working Approach .............
+# go to: https://github.com/sonofeft/GenericF2PY
+# Use "Clone or download" button to "Download ZIP"
+
+# with the source code at:
+<Your Name Here>/Downloads/GenericF2PY-master
+
+# edit setup.py and remove: 
+extra_link_args=["-shared"]
+
+# give the command:
+pip install -e .
+
+# will compile and install.
+
