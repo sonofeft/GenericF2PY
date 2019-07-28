@@ -2,7 +2,7 @@
 
 .. image:: https://travis-ci.org/sonofeft/GenericF2PY.svg?branch=master
         
-.. image:: https://img.shields.io/pypi/pyversions/GenericF2PY.svg
+.. image:: https://img.shields.io/static/v1?label=python&message=2.7, 3.5, 3.6, 3.7&color=blue
 
 .. image:: https://img.shields.io/pypi/l/GenericF2PY.svg
 
