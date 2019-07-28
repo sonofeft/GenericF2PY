@@ -39,6 +39,16 @@ and each operating system has its own approach.
 
 Click: :ref:`link_installgfortran` to see install instructions for a few platforms that I have tested.
 
+.. important::
+
+    Windows users & developers MUST put MinGW into environment PATH variable.
+    (see: :ref:`link_windowspath`)
+    
+    C:\MinGW\mingw64\bin  OR  C:\MinGW\mingw32\bin
+    
+    and
+    
+    C:\MinGW\mingw64\lib  OR  C:\MinGW\mingw32\lib
 
 Install Project
 ---------------
@@ -54,6 +64,15 @@ are available, the project can be installed with::
 
 and the project will be downloaded from `PyPI <https://pypi.org/>`_, 
 the FORTRAN will be compiled and the project installed.
+
+Test Installation
+-----------------
+
+After installing, GenericF2PY can be tested with the command line::
+
+    python -c "from genericf2py import main; main.main()"
+    
+It would be good to provide a similar simple test for your project.
 
 Upgrade Project
 ---------------

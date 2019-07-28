@@ -10,7 +10,7 @@ GitHub Log
 * Jul 28, 2019
     - (by: sonofeft) 
         - doc updates
-        - Abandoned direct *.whl download
+        - Abandoned direct \*.whl download
         - upload eggs to github
         - Update UPLOAD_TO_PyPI.BAT
         - doc updates and trying direct pip github install

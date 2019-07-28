@@ -87,6 +87,17 @@ however, python 3.7 seemed to work just fine with::
 Windows 10
 ----------
 
+.. important::
+
+    Windows users & developers MUST put MinGW into environment PATH variable.
+    (see: :ref:`link_windowspath`)
+    
+    C:\MinGW\mingw64\bin  OR  C:\MinGW\mingw32\bin
+    
+    and
+    
+    C:\MinGW\mingw64\lib  OR  C:\MinGW\mingw32\lib
+
 `Windows 10 <https://en.wikipedia.org/wiki/Windows_10>`_ is the most complicated platform 
 on which to set up `gfortran <https://www.gnu.org/software/gcc/fortran/>`_.
 
@@ -137,8 +148,20 @@ You should have a **C:\\MinGW** directory that looks like the one below.
 .. image:: ./_static/MinGW_folder.jpg
     :width: 40%
 
+.. _link_windowspath:
+
 Windows PATH
 ~~~~~~~~~~~~
+
+.. important::
+
+    Windows users & developers MUST put MinGW into environment PATH variable.
+    
+    C:\MinGW\mingw64\bin  OR  C:\MinGW\mingw32\bin
+    
+    and
+    
+    C:\MinGW\mingw64\lib  OR  C:\MinGW\mingw32\lib
 
 Having installed `gfortran <https://www.gnu.org/software/gcc/fortran/>`_ , 
 there are some options as to when and how to change the system's PATH environment variable.
@@ -179,3 +202,16 @@ System or User Variables can be edited.
 Add the **C:\\MinGW** path for **Either** the 32 or 64 bit compiler.
 
 .. image:: ./_static/new_env_var.jpg
+
+
+.. important::
+
+    Windows users & developers MUST put MinGW into environment PATH variable.
+    (see: :ref:`link_windowspath`)
+    
+    C:\MinGW\mingw64\bin  OR  C:\MinGW\mingw32\bin
+    
+    and
+    
+    C:\MinGW\mingw64\lib  OR  C:\MinGW\mingw32\lib
+
