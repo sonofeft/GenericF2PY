@@ -34,7 +34,7 @@ Some Linux systems may require::
 Install GFORTRAN
 ----------------
 
-Both developers and users will need to install `gfortran <https://www.gnu.org/software/gcc/fortran/>`_ 
+Both developers and users need to install `gfortran <https://www.gnu.org/software/gcc/fortran/>`_ 
 and each operating system has its own approach.
 
 Click: :ref:`link_installgfortran` to see install instructions for a few platforms that I have tested.

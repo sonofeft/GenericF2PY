@@ -6,7 +6,9 @@
 Install gfortran
 ================
 
-Each operating system has its own approach to installing `gfortran <https://www.gnu.org/software/gcc/fortran/>`_ 
+Both developers and users need to install `gfortran <https://www.gnu.org/software/gcc/fortran/>`_ .
+
+Each operating system has its own approach.
 
 Debian/Ubuntu
 -------------
