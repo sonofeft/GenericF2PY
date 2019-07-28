@@ -130,3 +130,5 @@ setup(
     #},
 )
 
+print('\n\nTest the install of GenericF2PY with the command:\n' +\
+      'python -c "from genericf2py import main; main.main()"')
