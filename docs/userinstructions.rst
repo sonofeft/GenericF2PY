@@ -30,21 +30,6 @@ Some Linux systems may require::
 
     sudo pip install numpy
 
-Feeling Lucky
--------------
-
-It is possible to install binary wheels directly from Github.
-
-If you are feeling lucky, then give a command like::
-
-    pip install git+https://github.com/sonofeft/GenericF2PY#egg=genericf2py
-    
-      ... OR for your project ...
-
-    pip install git+https://github.com/<your github name>/<your project name>#egg=<your egg name>
-    
-If none of the many pitfalls of a binary distribution are present, then we're done.
-
 
 Install GFORTRAN
 ----------------
