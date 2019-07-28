@@ -1,0 +1,20 @@
+
+how to install a Python 3.7 library using pip. 
+In order to follow best practices, install the new library in a virtual environment:
+
+    python3 -m venv py3.7.4-env
+    source py3.7.4-env/bin/activate
+    pip install --upgrade pip
+
+First line from the above will create a virtual environment named py3.7.4-env. 
+Second line will activate the environment. 
+Last line will update the local pip package manager. 
+
+
+Once en environment is activated, you can simply use the python and pip commands. 
+Any modifications you do inside an environment will have effect only in the 
+respective environment, 
+the global installed Python interpreter and libraries will not be affected.
+
+    for example:
+    pip install Pillow

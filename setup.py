@@ -1,4 +1,4 @@
-"""A setuptools based setup module for GenericF2PY
+"""A numpy.distutils based setup module for GenericF2PY
 
 See:
 http://genericf2py.readthedocs.org/en/latest/
@@ -22,10 +22,7 @@ from numpy.distutils.core import Extension, setup
 
 
 # Always prefer setuptools over distutils
-try:
-    from setuptools import  find_packages
-except ImportError:
-    from distutils.core import  find_packages
+from setuptools import  find_packages
 
 # To use a consistent encoding
 from codecs import open
@@ -36,6 +33,10 @@ here = path.abspath(path.dirname(__file__))
 # Get the long description from the relevant file
 with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
+    
+    # twine currently fails long description with "Unexpected section title or transition"
+    # (seems to be related to line endings)
+    long_description = long_description.replace('\n','\r')
 
 # Place install_requires into the text file "requirements.txt"
 with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f2:

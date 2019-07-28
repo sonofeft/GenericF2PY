@@ -14,8 +14,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   quickstart
-   functions
+   ftnproject
+   userinstructions
+   installgfortran
    copyright
    authors
    history

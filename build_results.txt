@@ -1,17 +1,47 @@
 _______________________________________________________
-Python Version: 3.5.4 (v3.5.4:3f56838, Aug  8 2017, 02:07:06) [MSC v.1900 32 bit (Intel)]
+Python Version: 3.5.4 (v3.5.4:3f56838, Aug  8 2017, 02:07:06) [MSC v.1900 32 bit (Intel)]   GenericF2PY Version: 0.1.16
    Py<--FORTRAN: 3 + 19 = 22
    Py<--Offsets: 3 by NNN = 103
    FORTRAN says: 3 + 19 = 22
    FTN  OFFSETS: 3 by 100 = 103
 _______________________________________________________
-Python Version: 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 23 2018, 23:31:17) [MSC v.1916 32 bit (Intel)]
+Python Version: 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 23 2018, 23:31:17) [MSC v.1916 32 bit (Intel)]   GenericF2PY Version: 0.1.16
    Py<--FORTRAN: 3 + 19 = 22
    Py<--Offsets: 3 by NNN = 103
    FORTRAN says: 3 + 19 = 22
    FTN  OFFSETS: 3 by 100 = 103
 _______________________________________________________
-Python Version: 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 19:29:22) [MSC v.1916 32 bit (Intel)]
+Python Version: 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 19:29:22) [MSC v.1916 32 bit (Intel)]   GenericF2PY Version: 0.1.16
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+('Python Version:', '2.7.16 (v2.7.16:413a49145e, Mar  4 2019, 01:30:55) [MSC v.1500 32 bit (Intel)]', '  GenericF2PY Version:', '0.1.16')
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+Python Version: 3.5.4 (v3.5.4:3f56838, Aug  8 2017, 02:17:05) [MSC v.1900 64 bit (AMD64)]   GenericF2PY Version: 0.1.16
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+Python Version: 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)]   GenericF2PY Version: 0.1.16
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+Python Version: 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 20:34:20) [MSC v.1916 64 bit (AMD64)]   GenericF2PY Version: 0.1.16
+   Py<--FORTRAN: 3 + 19 = 22
+   Py<--Offsets: 3 by NNN = 103
+   FORTRAN says: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+_______________________________________________________
+('Python Version:', '2.7.16 (v2.7.16:413a49145e, Mar  4 2019, 01:37:19) [MSC v.1500 64 bit (AMD64)]', '  GenericF2PY Version:', '0.1.16')
    Py<--FORTRAN: 3 + 19 = 22
    Py<--Offsets: 3 by NNN = 103
    FORTRAN says: 3 + 19 = 22

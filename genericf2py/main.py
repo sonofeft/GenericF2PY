@@ -60,7 +60,7 @@ def main(i1=3, i2=19):
     This function calls the test binary FORTRAN module and reports success or failure.
     """
     print('_'*55)
-    print('Python Version:',sys.version)    
+    print('Python Version:',sys.version,'  GenericF2PY Version:', __version__)    
     isum = add_2_ints( i1, i2 )
     print('   Py<--FORTRAN: %i + %i = %i'%(i1, i2, isum) )
     

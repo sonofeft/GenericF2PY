@@ -1,4 +1,9 @@
 nosetests
+gfortran
+devel
+mingw
+pyd
+MacOS
 py
 pypy
 txt

@@ -8,9 +8,9 @@ __pycache__/
 env/
 build/
 temp/
+backup/
 chk_generic_f2py/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/

@@ -1,13 +1,26 @@
 
 
-sudo apt-get install gfortran
+sudo apt-get install gfortran (OR Package Manager)
 
+(May need to install python-pip)
 pip install numpy
+pip install genericf2py
+
 
 >>>>>>>>>>>>>>>>>>>> LUBUNTU <<<<<<<<<<<<<<<<<<<<<<<<<<<<
->>>>>>>>>>>>>>>>>>>> Debian 64, Mate <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>> Debian 32 and 64, Mate <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-#............. Tested and Working Approach .............
+# simple approach tested and works on both Lubuntu and Debian
+sudo apt-get install gfortran
+pip install numpy
+pip install genericf2py
+
+sudo apt install python3-pip
+pip3 install numpy
+pip3 install genericf2py
+
+
+#............. Install from Source ALSO, Tested and Working Approach .............
 # go to: https://github.com/sonofeft/GenericF2PY
 # Use "Clone or download" button to "Download ZIP"
 
@@ -19,8 +32,6 @@ pip install -e .
 
 # will compile and install.
 
-#............... gfortran fails on simple approach ............
-pip install genericf2py
 
 # ============= SUCCESS on Lubuntu v ===================
 
@@ -28,6 +39,7 @@ sudo apt-get install gfortran
 pip install numpy
 pip install genericf2py
 
+ - get operating system with "hostnamectl"
  - compiles and installs genericf2py 
    Operating System: Ubuntu 18.04 LTS
              Kernel: Linux 4.15.0-20-generic
@@ -42,12 +54,26 @@ pip install genericf2py
 pip install -e git+https://github.com/sonofeft/GenericF2PY#egg=GenericF2PY
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>> CENTOS <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>>> CENTOS, CentOS7 <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-install gfortran
+ - install gfortran (as root)
+yum install epel-release
 yum install gcc-gfortran
-pip install numpy
-pip install genericf2py
+# install pip 
+yum install python-pip
+
+# in order to compile with Python.h, need python-devel
+sudo yum install python-devel
+
+- Now logged in as <username>
+sudo pip install --upgrade pip
+sudo pip install numpy
+sudo pip install genericf2py
+
+SUCCESS with python 2.7
+
+------
+sudo yum update
 
 
 ---- might install other python versions.
@@ -73,17 +99,24 @@ make altinstall
 python3.7 –v
 
 
+
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>> OPENSUSE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-- Never worked... last error was not finding Python.h during compile.
-
+# SUCCESS
 sudo zypper install gcc gcc-c++ gcc-fortran
+
+# if python3 not available:
+sudo zypper install python3
+
+# To solve problem of:  "not finding Python.h during compile."
+sudo zypper in python-devel   # for python2.x installs
+sudo zypper in python3-devel  # for python3.x installs
+
 sudo pip install numpy
 sudo pip install genericf2py
 
--  may also need
-sudo zypper in gnome-terminal
-sudo zypper in git
+sudo pip3 install numpy
+sudo pip3 install genericf2py
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>> MacOS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -110,4 +143,79 @@ extra_link_args=["-shared"]
 pip install -e .
 
 # will compile and install.
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Windows 10 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+C:\Users\Win10Clean>pip install genericf2py
+Collecting genericf2py
+  Downloading https://files.pythonhosted.org/packages/67/12/0ad21b28d32acf04b25cd313fa9ea07b9b74dc776c0e0f130c1a2c751032/genericf2py-0.1.14-cp37-cp37m-win_amd64.whl (204kB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 204kB 1.1MB/s
+Requirement already satisfied: future in c:\users\win10clean\appdata\local\programs\python\python37\lib\site-packages (from genericf2py) (0.16.0)
+Requirement already satisfied: numpy in c:\users\win10clean\appdata\local\programs\python\python37\lib\site-packages (from genericf2py) (1.15.2)
+Installing collected packages: genericf2py
+Successfully installed genericf2py-0.1.14
+You are using pip version 18.1, however version 19.2.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+C:\Users\Win10Clean>python
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from genericf2py import main
+ModuleNotFoundError: No module named 'numpy.core._multiarray_umath'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Win10Clean\AppData\Local\Programs\Python\Python37\lib\site-packages\genericf2py\main.py", line 50, in <module>
+    from genericf2py.fprog import add_2_ints, offset_int
+ImportError: numpy.core.multiarray failed to import
+>>>
+ 
+ 
+ ******** Solved with numpy upgrade *************
+
+C:\Users\Win10Clean>pip install --upgrade numpy
+Collecting numpy
+  Downloading https://files.pythonhosted.org/packages/ce/61/be72eee50f042db3acf0b1fb86650ad36d6c0d9be9fc29f8505d3b9d6baa/numpy-1.16.4-cp37-cp37m-win_amd64.whl (11.9MB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 11.9MB 2.2MB/s
+Installing collected packages: numpy
+  Found existing installation: numpy 1.15.2
+    Uninstalling numpy-1.15.2:
+      Successfully uninstalled numpy-1.15.2
+Successfully installed numpy-1.16.4
+You are using pip version 18.1, however version 19.2.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+C:\Users\Win10Clean>python
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from genericf2py import main
+>>> main.main()
+_______________________________________________________
+Python Version: 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)]
+   FORTRAN says: 3 + 19 = 22
+   Py<--FORTRAN: 3 + 19 = 22
+   FTN  OFFSETS: 3 by 100 = 103
+   Py<--Offsets: 3 by NNN = 103
+22 
+
+
+
+============= Not in sudoers group ==================
+on Debian
+Use the usermod command to add the user to the sudo group.
+usermod -aG sudo username
+
+
+on CentOS:
+usermod -aG wheel username
+
+By default, on Ubuntu, members of the sudo group have sudo privileges.
+Test sudo access on new user account
+Use the su command to switch to the new user account.
+su - username
+
+As the new user, verify that you can use sudo by prepending "sudo" to the command that you want to run with superuser privileges.
+sudo command_to_run
+For example, you can list the contents of the /root directory, which is normally only accessible to the root user.
+
+sudo ls -la /root
 
