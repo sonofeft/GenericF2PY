@@ -37,14 +37,21 @@ print( '     Building HISTORY.rst file' )
 print( '     at: ' + here )
 print( '     Need GitHub user password for ' + GITHUB_USER)
 print( '='*55 )
-PASSWORD = getpass.getpass(prompt='Enter Password: ')
 
-github_url = "https://api.github.com/repos/sonofeft/GenericF2PY/commits"
-headers = {'content-type': 'application/json'}
+try:
+    import json
+    with open('history.json') as json_file:
+        commitL = json.load( json_file )
+except:
+    PASSWORD = getpass.getpass(prompt='Enter Password: ')
 
-t = requests.get(github_url, auth=(GITHUB_USER,PASSWORD))
-commitL = t.json()
-    
+    github_url = "https://api.github.com/repos/sonofeft/GenericF2PY/commits"
+    headers = {'content-type': 'application/json'}
+
+    t = requests.get(github_url, auth=(GITHUB_USER,PASSWORD))
+    commitL = t.json()
+
+
 print( 'len(commitL) =' + '%s'%len(commitL) )
 
 newestCommitSig = None
