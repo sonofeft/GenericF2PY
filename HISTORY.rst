@@ -7,6 +7,10 @@ History
 GitHub Log
 ----------
 
+* Jul 30, 2020
+    - (by: sonofeft) 
+        - add fix for python 3.8 new os.add_dll_directory command
+
 * Jul 28, 2019
     - (by: sonofeft) 
         - doc updates
@@ -14,15 +18,19 @@ GitHub Log
         - upload eggs to github
         - Update UPLOAD_TO_PyPI.BAT
         - doc updates and trying direct pip github install
+        
 * Jul 24, 2019
     - (by: sonofeft) 
         - working multiple OS installs
+        
 * Jul 23, 2019
     - (by: sonofeft) 
         - start ubuntu setup
+        
 * Jul 21, 2019
     - (by: sonofeft) 
         - Update .travis.yml
+        
 * Jul 20, 2019
     - (by: sonofeft) 
         - Update .travis.yml

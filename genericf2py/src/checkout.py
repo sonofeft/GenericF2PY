@@ -1,3 +1,6 @@
+import os
+os.add_dll_directory( r'C:\MinGW\mingw64\bin' )
+
 from fprog import add_2_ints, offset_int
 
 my_sum = add_2_ints(2,3)

@@ -100,3 +100,4 @@ ENV/
 
 # mypy
 .mypy_cache/
+genericf2py/src/fprog.cp38-win_amd64.pyd

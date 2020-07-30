@@ -13,4 +13,6 @@ python setup.py install
 python setup.py bdist_wheel
 
 rem Test the compiled module
-python .\genericf2py\main.py
+rem python .\genericf2py\main.py
+python -c "from genericf2py.main import main; main()"
+

@@ -1,6 +1,6 @@
 
 rem set python path variable
-set MYPYTHONPATH=D:\Python37_64
+set MYPYTHONPATH=D:\Python38_64
 
 rem set name of FORTRAN program (also import name of compiled module)
 set MYPROGRAMNAME=fprog
