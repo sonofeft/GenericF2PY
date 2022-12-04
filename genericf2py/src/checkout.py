@@ -1,5 +1,8 @@
 import os
-os.add_dll_directory( r'C:\MinGW\mingw64\bin' )
+try:
+    os.add_dll_directory( r'C:\MinGW\mingw64\bin' )
+except:
+    print( "FAILED: os.add_dll_directory( r'C:\MinGW\mingw64\bin' )" )
 
 from fprog import add_2_ints, offset_int
 
